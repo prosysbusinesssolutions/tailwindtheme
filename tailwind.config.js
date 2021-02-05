@@ -8,7 +8,15 @@ module.exports = {
       
     
 
-    extend: {},
+    extend: {
+      fontFamily: {
+        headline: ['Oswald']
+        },
+        
+      colors:{
+        mainColor:'#212149'
+      }
+    },
   },
   variants: {
     extend: {},
