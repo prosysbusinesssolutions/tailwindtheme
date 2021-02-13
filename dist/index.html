@@ -1,19 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html x-data="{dark:true }" x-bind:class="dark  ? 'dark' : '' " lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Project</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body class="bg-gray-100 debug-screens">
 
-    <div class="container w-full min-h-screen px-6 py-8 mx-auto bg-gray-100">
+    <div class="container w-full min-h-screen px-6 py-8 mx-auto bg-gray-100 dark:bg-gray-800">
         <!-- page header / headings -->
         <section id="header">
+          <button @click="dark = !dark" class="flex items-center px-4 py-2 bg-gray-300 rounded">
+            
+            <!--moon-->
+            <svg x-show="!dark" class="h-6 mr-1 text-indigo-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+            <!--sun-->
+            <svg x-show="dark" class="h-6 mr-1 text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            </svg>
+            
+            
+            
+            <span class="leading-4" x-text="dark ? 'Switch to normal mode' : 'Switch to dark mode'" ></span></button>
           <div class="text-center">
-            <h1 class=" text-mainColor">Tom Gonzales home training <br> I'll get you in shape!</h1>
-            <h2>Muscle building • Functional training • Nutritional advice</h2>
+            <h1 class="leading-relaxed text-mainColor ">Tom Gonzales home training <br>
+              <span class="text-4xl italic text-indigo-900 dark:text-indigo-300 sm:text-5xl lg:text-7xl opacity-80">
+                <q>&nbsp; I'll get you in shop! &nbsp;</q>
+                </span>
+              
+              </h1>
+            <h2> building • Functional training • Nutritional advice</h2>
           </div>
         </section>
        
@@ -75,7 +95,7 @@
           <div class="flex justify-around justify-content lg:w-7/12 md:w-11/12 lg:mx-auto ">
             <div id = "email">
               <p>Your message:</p>
-              <a class="flex items-center px-4 py-2 transition bg-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 w-max hover:bg-gray-400 hover:shadow-none" href="#">
+              <a class="flex items-center px-4 py-2 transition bg-gray-300 shadow-sm dark:bg-gray-500 dark:text-white dark:hover:bg-gray-900 focus:ring-2 focus:ring-blue-500 w-max hover:bg-gray-400 hover:shadow-none" href="#">
                 <svg class="h-4 mr-1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>
                 
                 
@@ -84,7 +104,7 @@
             </div>
             <div id = "whatsApp_telefon" class=" lg:justify-self-end">
               <p class="text-lg">WhatsApp:</p>
-              <span class="text-lg xl:text-2xl">1 222 555 44 33</span>
+              <span class="text-lg xl:text-2xl dark:text-white ">1 222 555 44 33</span>
             </div>
           </div>
         </section>
