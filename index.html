@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html x-data="{dark:true }" x-bind:class="dark  ? 'dark' : '' " lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="/build/styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body class="bg-gray-100 debug-screens">
+
+    <div class="container w-full min-h-screen px-6 py-8 mx-auto bg-gray-100 dark:bg-gray-800">
+        <!-- page header / headings -->
+        <section id="header">
+          <button @click="dark = !dark" class="flex items-center px-4 py-2 bg-gray-300 rounded">
+            
+            <!--moon-->
+            
+            <svg x-show="!dark" class="h-6 mr-1 text-indigo-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+            <!--sun-->
+            <svg x-show="dark" class="h-6 mr-1 text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            </svg>
+            
+            
+            
+            <span class="leading-4" x-text="dark ? 'Switch to normal mode' : 'Switch to dark mode'" ></span></button>
+          <div class="text-center">
+            <h1 class="leading-relaxed text-mainColor ">Tom Gonzales home training <br>
+              <span class="text-4xl italic text-indigo-900 dark:text-indigo-300 sm:text-5xl lg:text-7xl opacity-80">
+                <q>&nbsp; I'll get you in shop! &nbsp;</q>
+                </span>
+              
+              </h1>
+            <h2> Building • Functional training • Nutritional advice</h2>
+          </div>
+        </section>
+       
+    
+        <!-- picture -->
+        <section id="image_services"  class="grid mt-8 sm:grid-cols-2 lg:w-10/12 sm:gap-5 md:gap-10 lg:mx-auto ">
+          <div id = "image" class="mx-auto sm:ml-auto mb-7 sm:mb-0">
+            <img src = "assets/img/tom.jpg" alt = "Tom Gonzales Online Training">
+          </div>
+
+          <!-- Services -->
+        
+          <div id = "services">
+            <h3 class="px-2">I offer you:</h3>
+            <ul class="px-2 ml-6 list-disc list-outside">
+              <li class="" >Lessons via Skype and you can record all sessions and watch them again later. </li>
+              <li class="">Holistic full body training</li>
+              <li class="">Training without equipment</li>
+              <li class="">Pain reduction</li>
+              <li class="">Tailored nutrition plans</li>
+            </ul>
+            <!--Only for large-->
+            <h3 class="hidden mt-10 md:block">My qualifications:</h3>
+              <ul class="hidden ml-6 list-disc list-outside md:block" >
+                <li class="">Certified nutritionist</li>
+                <li class="">Certified fitness trainer</li>
+                <li class="">5 years of experience in 1: 1 training</li>
+              </ul>
+
+             
+          </div>
+        </section>
+
+        <section id="qualification_sm" class="md:hidden">
+          <!--Only for sm small resolution-->
+          <div class="grid grid-cols-1 sm:block">
+          <h3 class="sm:mt-1 md:mt-10 ">My qualifications:</h3>
+          <ul class="mb-0 ml-3 list-disc list-outside " >
+            <li class="leading-4 ">Certified nutritionist</li>
+            <li class="leading-4">Certified fitness trainer</li>
+            <li class="leading-4">5 years of experience in 1: 1 training</li>
+          </ul>
+        </div>
+      </section>
+
+       <!-- Prices and payment -->
+        <section id = "price_payment" class="mt-5 ">
+          
+        <div class="mx-auto lg:w-7/12 xl:w-8/12" >
+          <h2>Prices and payment</h2>
+          <p class="">My most important goal is that you get ahead with your goals.</p>
+          <p class="text-justify lg:text-justify">In a free opening session we will discuss what you want to achieve and how much you can or want to spend. Then we are guaranteed to find a solution that suits you.</p>
+        </div>
+
+        </section>
+       
+        <!-- Contact -->
+        <section id="contact" class="mt-8 mb-10 ">
+          <div class="flex justify-around justify-content lg:w-7/12 md:w-11/12 lg:mx-auto ">
+            <div id = "email">
+              <p>Your message:</p>
+              <a class="flex items-center px-4 py-2 transition bg-gray-300 shadow-sm dark:bg-gray-500 dark:text-white dark:hover:bg-gray-900 focus:ring-2 focus:ring-blue-500 w-max hover:bg-gray-400 hover:shadow-none" href="#">
+                <svg class="h-4 mr-1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>
+                
+                
+                
+                <span class="text-lg 2xl:text-xl">Send an Email</span></a>
+            </div>
+            <div id = "whatsApp_telefon" class=" lg:justify-self-end">
+              <p class="text-lg">WhatsApp:</p>
+              <span class="text-lg xl:text-2xl dark:text-white ">1 222 555 44 33</span>
+            </div>
+          </div>
+        </section>
+
+        
+             
+        
+    </div>
+
+    <!--Footer Start-->
+    <section>
+    <footer class="text-gray-600 body-font">
+      <div class="container flex flex-col items-center px-5 py-8 mx-auto sm:flex-row">
+        <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 text-white bg-indigo-500 rounded-full" viewBox="0 0 24 24"> -->
+            
+            <a href="https://prosyssolutions.com.pk/"><img src="/dist/img/transparent-logo.png" class="h-20 p-4 w-50" alt=""></a>
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+
+          </svg>
+          <span class="ml-3 text-xl">ProSys Solutions</span>
+        </a>
+        <p class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0">© 2022 ProSys Solutions —
+          <a href="https://twitter.com/EvangelistsGuru" class="ml-1 text-gray-600" rel="noopener noreferrer" target="_blank">@EvangelistsGuru
+          </a>
+        </p>
+        <span class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
+          <a href="https://www.facebook.com/profile.php?id=100010274342617" class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://twitter.com/EvangelistsGuru" class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/prosysshop/" class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/zohaircyber/" class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </footer>
+    <!--Footer Ended-->
+  </section>
+   
+</body>
+</html>
